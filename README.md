@@ -64,7 +64,7 @@ Started at: Mon Aug 19 11:30:43 2019
 Then, you will get ```GenoT.tped.hapmap``` file.
 
 
-# Installing SNPhylo on Linux
+# Installing SNPhylo on Linux (Ubuntu 16.06)
 
 
 1. Install the R (if R is not installed; as root)
@@ -132,5 +132,30 @@ tar xvfz snphylo.tar.gz -C "${SNPHYLO_HOME}"
 ```
 
 
+6.Intall R packages: ```gdsfmt```, ```SNPRelate```, ```getopt```,```igraph``` and ```phangorn```.
+
+```
+if (!requireNamespace("BiocManager", quietly = TRUE))
+    install.packages("BiocManager")
+
+BiocManager::install("gdsfmt")
+
+BiocManager::install("SNPRelate")
 
 
+install.packages("getopt")
+
+```
+
+```
+# Install libgfortran.so.4 on ubuntu 16.06
+sudo add-apt-repository ppa:jonathonf/gcc-7.1
+sudo apt-get update
+
+sudo apt-get install gcc-7 g++-7
+sudo apt-get install gfortran-7
+
+install.packages("igraph")
+install.packages("phangorn")
+
+```
