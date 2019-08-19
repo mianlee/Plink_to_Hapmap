@@ -66,12 +66,16 @@ Then, you will get ```GenoT.tped.hapmap``` file.
 
 # Installing SNPhylo on Linux (Ubuntu 16.06)
 
+The installation of SNPhylo on my Ubuntu 16.06 is a little bit different from the manual, but it worked for me. If you encounter the same situation, please follow my steps.
+
 
 1. Install the R (if R is not installed; as root)
 
 ```
 apt-get -y install r-base-dev r-cran-getopt r-cran-rgl
 ```
+
+My R version: 3.6.1 (2019-07-05)
 
 2. Make a SNPhylo directory in your home directory
 
@@ -121,18 +125,8 @@ popd
 
 ```
 
-5. Install the SNPhylo
 
-```
-curl -O http://chibba.pgml.uga.edu/snphylo/snphylo.tar.gz
-
-
-tar xvfz snphylo.tar.gz -C "${SNPHYLO_HOME}"
-
-```
-
-
-6.Intall R packages: ```gdsfmt```, ```SNPRelate```, ```getopt```,```igraph``` and ```phangorn```.
+5.Intall R packages: ```gdsfmt```, ```SNPRelate```, ```getopt```,```igraph``` and ```phangorn```.
 
 ```
 if (!requireNamespace("BiocManager", quietly = TRUE))
@@ -159,3 +153,45 @@ install.packages("igraph")
 install.packages("phangorn")
 
 ```
+
+6. Install the SNPhylo
+
+```
+curl -O http://chibba.pgml.uga.edu/snphylo/snphylo.tar.gz
+
+
+tar xvfz snphylo.tar.gz -C "${SNPHYLO_HOME}"
+```
+
+7. Setup the SNPhylo
+
+```
+$ pushd "${SNPHYLO_HOME}/SNPhylo"
+
+$ bash setup.sh
+
+START TO SET UP FOR SNPHYLO!!!
+
+The detected path of Rscript is /bin/Rscript. Is it correct? [Y/n] y
+
+The detected path of python is /bin/python. Is it correct? [Y/n] y
+
+muscle is not found. Is the program already installed? [y/N] y
+Please enter the path of muscle program (ex: /home/foo/bin/muscle): /home/foo/snphylo/bin/muscle
+
+dnaml is not found. Is the program already installed? [y/N] y
+Please enter the path of dnaml program (ex: /home/foo/bin/dnaml): /home/foo/snphylo/phylip/exe/dnaml
+
+At least one R package (gdsfmt, SNPRelate, getopt or phangorn) to run this pipeline is not found. Are the packages already installed? [y/N]
+
+Do you want to install the packages by this script? [y/N] y
+
+...... (Installing R packages)
+
+SNPHYLO is successfully installed!!!
+
+$ popd
+
+```
+
+For other operating system, see SNPhylo [homepage](http://chibba.pgml.uga.edu/snphylo/).
