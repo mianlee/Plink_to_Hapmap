@@ -195,3 +195,16 @@ $ popd
 ```
 
 For other operating system, see SNPhylo [homepage](http://chibba.pgml.uga.edu/snphylo/).
+
+
+
+## Run SNPhylo
+
+SNPhylo doesn't work with python3, so I use python2 instead of python3 to set up "bash setup.sh" again.
+
+```
+./snphylo.sh -H ~/Desktop/NatGeo/GenoT.tped.hapmap
+```
+
+
+
