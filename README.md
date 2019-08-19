@@ -67,7 +67,13 @@ Then, you will get ```GenoT.tped.hapmap``` file.
 # Installing SNPhylo on Linux
 
 
-Make a SNPhylo directory in your home directory
+1. Install the R (if R is not installed; as root)
+
+```
+apt-get -y install r-base-dev r-cran-getopt r-cran-rgl
+```
+
+2. Make a SNPhylo directory in your home directory
 
 ```
 echo ${HOME}
@@ -81,7 +87,7 @@ mkdir -p "${SNPHYLO_HOME}/bin"
 ```
 
 
-Install the MUSCLE (if MUSCLE is not installed)
+3. Install the MUSCLE (if MUSCLE is not installed)
 
 ```
 curl -O http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
@@ -93,7 +99,7 @@ tar xvfz muscle3.8.31_i86linux64.tar.gz -C "${SNPHYLO_HOME}/bin"
 ln -sf "${SNPHYLO_HOME}/bin/muscle3.8.31_i86linux64" "${SNPHYLO_HOME}/bin/muscle"
 ```
 
-Install the Phylip package (if Phylip package is not installed)
+4. Install the Phylip package (if Phylip package is not installed)
 
 
 I downloaded [phylip-3.697](http://evolution.genetics.washington.edu/phylip/getme-new1.html)
@@ -115,7 +121,7 @@ popd
 
 ```
 
-Install the SNPhylo
+5. Install the SNPhylo
 
 ```
 curl -O http://chibba.pgml.uga.edu/snphylo/snphylo.tar.gz
@@ -123,6 +129,8 @@ curl -O http://chibba.pgml.uga.edu/snphylo/snphylo.tar.gz
 
 tar xvfz snphylo.tar.gz -C "${SNPHYLO_HOME}"
 
-
 ```
+
+
+
 
