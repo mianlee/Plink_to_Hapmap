@@ -85,10 +85,10 @@ Install the MUSCLE (if MUSCLE is not installed)
 
 ```
 curl -O http://www.drive5.com/muscle/downloads3.8.31/muscle3.8.31_i86linux64.tar.gz
-...... (Downloaing the MUSCLE program)
+
 
 tar xvfz muscle3.8.31_i86linux64.tar.gz -C "${SNPHYLO_HOME}/bin"
-...... (Uncompressing the MUSCLE program)
+
 
 ln -sf "${SNPHYLO_HOME}/bin/muscle3.8.31_i86linux64" "${SNPHYLO_HOME}/bin/muscle"
 ```
@@ -101,7 +101,7 @@ I downloaded [phylip-3.697](http://evolution.genetics.washington.edu/phylip/getm
 ```
 
 tar xvfz phylip-3.697.tar.gz -C "${SNPHYLO_HOME}"
-...... (Uncompressing the Phylip source codes)
+
 
 ln -sf "${SNPHYLO_HOME}/phylip-3.697" "${SNPHYLO_HOME}/phylip"
 
@@ -109,7 +109,7 @@ pushd "${SNPHYLO_HOME}/phylip/src"
 
 cp Makefile.unx Makefile
 make install
-...... (Compiling and installing the Phylip programs)
+
 
 popd
 
@@ -119,10 +119,10 @@ Install the SNPhylo
 
 ```
 curl -O http://chibba.pgml.uga.edu/snphylo/snphylo.tar.gz
-...... (Downloading the SNPhylo)
+
 
 tar xvfz snphylo.tar.gz -C "${SNPHYLO_HOME}"
-...... (Uncompressing the SNPhylo)
+
 
 ```
 
