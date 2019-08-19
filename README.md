@@ -37,7 +37,7 @@ Note: No phenotypes present.
 ```
 
 
-And then his perl script [convert_tped_to_hapmap.pl](data/convert_tped_to_hapmap.pl).
+And then his perl script [convert_tped_to_hapmap.pl](data/convert_tped_to_hapamp.pl).
 
 ```
  perl convert_tped_to_hapamp.pl --tped GenoT.tped --tfam GenoT.tfam --build=ncbi_36
