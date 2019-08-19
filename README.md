@@ -4,7 +4,7 @@ Reasons:
 
 I want ot use snp microarray data to built a phylogenetic tree. I did some google search, and found out ```[SNPhylo](http://chibba.pgml.uga.edu/snphylo/)``` can achieve this goal. But it requires Hapmap file format.
 
-What I have are ```Geno.bed```, ```Geno.bim``` and ```Geno.fam```, the binary Plink format. if you have ```Geno.ped``` and ```Geno.map``` files, it will work the same way.
+What I have are [```Geno.bed```](data/Geno.bed), [```Geno.bim```](data/Geno.bim) and [```Geno.fam```](data/Geno.fam), the binary Plink format. if you have ```Geno.ped``` and ```Geno.map``` files, it will work the same way.
 
 The solution is proposed by **Pablo Marin-Garcia** from the [Biostar Forum Question](https://www.biostars.org/p/18322/).
 
@@ -37,7 +37,7 @@ Note: No phenotypes present.
 ```
 
 
-And then his perl script convert_tped_to_hapmap.pl.
+And then his perl script [convert_tped_to_hapmap.pl](data/convert_tped_to_hapmap.pl).
 
 ```
  perl convert_tped_to_hapamp.pl --tped GenoT.tped --tfam GenoT.tfam --build=ncbi_36
