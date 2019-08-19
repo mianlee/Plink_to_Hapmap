@@ -61,5 +61,5 @@ Started at: Mon Aug 19 11:30:43 2019
 
  ```
 
-
+Then, you will get ```GenoT.tped.hapmap``` file.
 
